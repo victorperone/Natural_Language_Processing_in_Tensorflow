@@ -1,0 +1,56 @@
+# =========================================================
+# Module 1 - Text Sentiment Analysis
+# Natural Language Processing in TensorFlow
+# =========================================================
+# This module focuses on NLP preprocessing:
+# - tokenization
+# - OOV handling
+# - padding
+# - stopword removal
+# - label encoding
+#
+# Standard library modules like `json` and `csv`
+# do not need to be listed here.
+# =========================================================
+
+
+# ---------------------------------------------------------
+# Core Deep Learning Framework
+# ---------------------------------------------------------
+tensorflow==2.15.0
+
+
+# ---------------------------------------------------------
+# Numerical Computing
+# ---------------------------------------------------------
+# Used for array operations and compatibility with TensorFlow
+numpy==1.26.4
+
+
+# ---------------------------------------------------------
+# Visualization
+# ---------------------------------------------------------
+# Useful for plots, notebook charts, and examples
+matplotlib==3.8.2
+
+
+# ---------------------------------------------------------
+# Notebook Environment
+# ---------------------------------------------------------
+# Recommended for running the notebooks locally
+jupyterlab==4.2.5
+ipykernel==6.29.5
+
+
+# ---------------------------------------------------------
+# Notes
+# ---------------------------------------------------------
+# If you want a more minimal setup, you can remove:
+# - jupyterlab
+# - ipykernel
+#
+# And keep only:
+# tensorflow, numpy, matplotlib
+#
+# On Google Colab, TensorFlow is usually preinstalled,
+# so local dependency setup may not be necessary.

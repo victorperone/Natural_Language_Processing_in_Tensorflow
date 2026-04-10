@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 520" width="1400" height="520">
+  <style>
+    .title { font-family: Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 700; fill: #222; }
+    .subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 15px; fill: #555; }
+    .boxtext { font-family: Arial, Helvetica, sans-serif; font-size: 19px; font-weight: 700; fill: #222; }
+    .small { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #444; }
+    .tiny { font-family: Arial, Helvetica, sans-serif; font-size: 12px; fill: #666; }
+    .arrow { stroke: #444; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+    .input { fill: #E3F2FD; stroke: #1E88E5; stroke-width: 2.5; }
+    .clean { fill: #E8F5E9; stroke: #2E7D32; stroke-width: 2.5; }
+    .token { fill: #FFF8E1; stroke: #F9A825; stroke-width: 2.5; }
+    .vocab { fill: #F3E5F5; stroke: #8E24AA; stroke-width: 2.5; }
+    .seq { fill: #E0F7FA; stroke: #00838F; stroke-width: 2.5; }
+    .pad { fill: #FFF3E0; stroke: #EF6C00; stroke-width: 2.5; }
+    .label { fill: #FCE4EC; stroke: #C2185B; stroke-width: 2.5; }
+    .ready { fill: #ECEFF1; stroke: #546E7A; stroke-width: 2.5; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <polygon points="0 0, 12 6, 0 12" fill="#444"/>
+    </marker>
+  </defs>
+
+  <text x="700" y="45" text-anchor="middle" class="title">Module 1 NLP Preprocessing Pipeline</text>
+  <text x="700" y="72" text-anchor="middle" class="subtitle">From raw text to model-ready tensors for sentiment analysis and text classification</text>
+
+  <!-- Row 1 -->
+  <rect x="55" y="115" rx="18" ry="18" width="280" height="110" class="input"/>
+  <text x="195" y="148" text-anchor="middle" class="boxtext">1. Raw Text Input</text>
+  <text x="195" y="176" text-anchor="middle" class="small">Sentences, headlines, reviews, news</text>
+  <text x="195" y="200" text-anchor="middle" class="tiny">Example: "I really love this movie"</text>
+
+  <rect x="390" y="115" rx="18" ry="18" width="280" height="110" class="clean"/>
+  <text x="530" y="148" text-anchor="middle" class="boxtext">2. Text Cleaning</text>
+  <text x="530" y="176" text-anchor="middle" class="small">Lowercasing • punctuation handling</text>
+  <text x="530" y="200" text-anchor="middle" class="tiny">Optional: stopword removal</text>
+
+  <rect x="725" y="115" rx="18" ry="18" width="280" height="110" class="token"/>
+  <text x="865" y="148" text-anchor="middle" class="boxtext">3. Tokenizer</text>
+  <text x="865" y="176" text-anchor="middle" class="small">Fit on text corpus</text>
+  <text x="865" y="200" text-anchor="middle" class="tiny">Builds token rules + word frequency order</text>
+
+  <rect x="1060" y="115" rx="18" ry="18" width="280" height="110" class="vocab"/>
+  <text x="1200" y="148" text-anchor="middle" class="boxtext">4. Vocabulary / Word Index</text>
+  <text x="1200" y="176" text-anchor="middle" class="small">Word → Integer mapping</text>
+  <text x="1200" y="200" text-anchor="middle" class="tiny">Example: {"love": 4, "movie": 19}</text>
+
+  <line x1="335" y1="170" x2="390" y2="170" class="arrow"/>
+  <line x1="670" y1="170" x2="725" y2="170" class="arrow"/>
+  <line x1="1005" y1="170" x2="1060" y2="170" class="arrow"/>
+
+  <!-- Row transition -->
+  <line x1="1200" y1="225" x2="1200" y2="285" class="arrow"/>
+  <line x1="1200" y1="285" x2="1060" y2="285" class="arrow"/>
+
+  <!-- Row 2 -->
+  <rect x="1060" y="285" rx="18" ry="18" width="280" height="110" class="seq"/>
+  <text x="1200" y="318" text-anchor="middle" class="boxtext">5. Text to Sequences</text>
+  <text x="1200" y="346" text-anchor="middle" class="small">Convert words into token IDs</text>
+  <text x="1200" y="370" text-anchor="middle" class="tiny">Example: [8, 4, 19]</text>
+
+  <rect x="725" y="285" rx="18" ry="18" width="280" height="110" class="pad"/>
+  <text x="865" y="318" text-anchor="middle" class="boxtext">6. Padding</text>
+  <text x="865" y="346" text-anchor="middle" class="small">Normalize sequence length</text>
+  <text x="865" y="370" text-anchor="middle" class="tiny">Example: [8, 4, 19, 0, 0]</text>
+
+  <rect x="390" y="285" rx="18" ry="18" width="280" height="110" class="label"/>
+  <text x="530" y="318" text-anchor="middle" class="boxtext">7. Label Encoding</text>
+  <text x="530" y="346" text-anchor="middle" class="small">Class names → numeric labels</text>
+  <text x="530" y="370" text-anchor="middle" class="tiny">Example: "tech" → 4</text>
+
+  <rect x="55" y="285" rx="18" ry="18" width="280" height="110" class="ready"/>
+  <text x="195" y="318" text-anchor="middle" class="boxtext">8. Model-Ready Tensors</text>
+  <text x="195" y="346" text-anchor="middle" class="small">Padded text + encoded labels</text>
+  <text x="195" y="370" text-anchor="middle" class="tiny">Ready for Embedding, RNN, LSTM, or Dense models</text>
+
+  <line x1="1060" y1="340" x2="1005" y2="340" class="arrow"/>
+  <line x1="725" y1="340" x2="670" y2="340" class="arrow"/>
+  <line x1="390" y1="340" x2="335" y2="340" class="arrow"/>
+
+  <!-- Footer notes -->
+  <text x="700" y="450" text-anchor="middle" class="small">Key ideas in Module 1: tokenization • OOV handling • padding • stopword removal • label encoding</text>
+  <text x="700" y="476" text-anchor="middle" class="tiny">This diagram summarizes the preprocessing workflow before training sentiment or sequence models.</text>
+</svg>

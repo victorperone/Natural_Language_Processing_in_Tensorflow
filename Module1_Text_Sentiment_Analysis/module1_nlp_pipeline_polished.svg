@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" width="1600" height="560">
+  <defs>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <polygon points="0 0, 12 6, 0 12" fill="#5B6573"/>
+    </marker>
+  </defs>
+
+  <style>
+    .title { font-family: Arial, Helvetica, sans-serif; font-size: 30px; font-weight: 700; fill: #1F2937; }
+    .subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 15px; fill: #5B6573; }
+    .cardtitle { font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 700; fill: #1F2937; }
+    .cardtext { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #4B5563; }
+    .tiny { font-family: Arial, Helvetica, sans-serif; font-size: 12px; fill: #6B7280; }
+    .arrow { stroke: #5B6573; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+    .line { stroke: #5B6573; stroke-width: 3; fill: none; }
+    .chip { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; fill: #ffffff; }
+  </style>
+
+  <!-- Background rectangle -->
+  <rect x="0" y="0" width="100%" height="100%" rx="30" ry="30" fill="#ADD8E6" />
+
+  <text x="800" y="42" text-anchor="middle" class="title">NLP Preprocessing Pipeline</text>
+  <text x="800" y="68" text-anchor="middle" class="subtitle">Module 1 · Text Sentiment Analysis · From raw language to model-ready tensors</text>
+
+  <!-- Row 1 -->
+  <rect x="55" y="120" rx="24" ry="24" width="330" height="130" fill="#EAF4FF" stroke="#3B82F6" stroke-width="2.5"/>
+  <circle cx="95" cy="155" r="18" fill="#3B82F6"/>
+  <text x="95" y="160" text-anchor="middle" class="chip">1</text>
+  <text x="220" y="157" text-anchor="middle" class="cardtitle">Raw Text Input</text>
+  <text x="220" y="186" text-anchor="middle" class="cardtext">Reviews, headlines, sentences, CSV/JSON text</text>
+  <text x="220" y="211" text-anchor="middle" class="tiny">Example: "I really love this movie"</text>
+
+  <rect x="440" y="120" rx="24" ry="24" width="330" height="130" fill="#ECFDF3" stroke="#22C55E" stroke-width="2.5"/>
+  <circle cx="480" cy="155" r="18" fill="#22C55E"/>
+  <text x="480" y="160" text-anchor="middle" class="chip">2</text>
+  <text x="605" y="157" text-anchor="middle" class="cardtitle">Clean and Normalize</text>
+  <text x="605" y="184" text-anchor="middle" class="cardtext">Lowercase and clean punctuation</text>
+  <text x="605" y="206" text-anchor="middle" class="cardtext">Optional stopword removal</text>
+  <text x="605" y="227" text-anchor="middle" class="tiny">Output example: "really love movie"</text>
+
+  <rect x="825" y="120" rx="24" ry="24" width="330" height="130" fill="#FFF8E8" stroke="#F59E0B" stroke-width="2.5"/>
+  <circle cx="865" cy="155" r="18" fill="#F59E0B"/>
+  <text x="865" y="160" text-anchor="middle" class="chip">3</text>
+  <text x="990" y="157" text-anchor="middle" class="cardtitle">Tokenizer</text>
+  <text x="990" y="184" text-anchor="middle" class="cardtext">Fit on the corpus</text>
+  <text x="990" y="206" text-anchor="middle" class="cardtext">Handle unknown words with &lt;OOV&gt;</text>
+  <text x="990" y="227" text-anchor="middle" class="tiny">Learns token rules and word frequencies</text>
+
+  <rect x="1210" y="120" rx="24" ry="24" width="330" height="130" fill="#F6ECFF" stroke="#A855F7" stroke-width="2.5"/>
+  <circle cx="1250" cy="155" r="18" fill="#A855F7"/>
+  <text x="1250" y="160" text-anchor="middle" class="chip">4</text>
+  <text x="1375" y="157" text-anchor="middle" class="cardtitle">Vocabulary / Word Index</text>
+  <text x="1375" y="186" text-anchor="middle" class="cardtext">Build a mapping from each word to an integer ID</text>
+  <text x="1375" y="211" text-anchor="middle" class="tiny">Example: {"love": 4, "movie": 19}</text>
+
+  <line x1="385" y1="185" x2="440" y2="185" class="arrow"/>
+  <line x1="770" y1="185" x2="825" y2="185" class="arrow"/>
+  <line x1="1155" y1="185" x2="1210" y2="185" class="arrow"/>
+
+  <!-- Correct transition arrow -->
+  <line x1="1375" y1="250" x2="1375" y2="305" class="arrow"/>
+
+  <!-- Row 2 -->
+  <rect x="1210" y="305" rx="24" ry="24" width="330" height="130" fill="#E8FBFF" stroke="#06B6D4" stroke-width="2.5"/>
+  <circle cx="1250" cy="340" r="18" fill="#06B6D4"/>
+  <text x="1250" y="345" text-anchor="middle" class="chip">5</text>
+  <text x="1375" y="342" text-anchor="middle" class="cardtitle">Text to Sequences</text>
+  <text x="1375" y="371" text-anchor="middle" class="cardtext">Convert words into integer vectors</text>
+  <text x="1375" y="396" text-anchor="middle" class="tiny">Example: [7, 4, 19]</text>
+
+  <rect x="825" y="305" rx="24" ry="24" width="330" height="130" fill="#FFF3E6" stroke="#F97316" stroke-width="2.5"/>
+  <circle cx="865" cy="340" r="18" fill="#F97316"/>
+  <text x="865" y="345" text-anchor="middle" class="chip">6</text>
+  <text x="990" y="342" text-anchor="middle" class="cardtitle">Pad Sequences</text>
+  <text x="990" y="371" text-anchor="middle" class="cardtext">Make every sequence the same length</text>
+  <text x="990" y="396" text-anchor="middle" class="tiny">Example: [7, 4, 19, 0, 0]</text>
+
+  <rect x="440" y="305" rx="24" ry="24" width="330" height="130" fill="#FFEAF1" stroke="#EC4899" stroke-width="2.5"/>
+  <circle cx="480" cy="340" r="18" fill="#EC4899"/>
+  <text x="480" y="345" text-anchor="middle" class="chip">7</text>
+  <text x="605" y="342" text-anchor="middle" class="cardtitle">Encode Labels</text>
+  <text x="605" y="371" text-anchor="middle" class="cardtext">Turn categories into numeric targets</text>
+  <text x="605" y="396" text-anchor="middle" class="tiny">Example: "positive" to 1 or "tech" to 4</text>
+
+  <rect x="55" y="305" rx="24" ry="24" width="330" height="130" fill="#F3F4F6" stroke="#6B7280" stroke-width="2.5"/>
+  <circle cx="95" cy="340" r="18" fill="#6B7280"/>
+  <text x="95" y="345" text-anchor="middle" class="chip">8</text>
+  <text x="220" y="342" text-anchor="middle" class="cardtitle">Model-Ready Tensors</text>
+  <text x="220" y="371" text-anchor="middle" class="cardtext">Padded text plus encoded labels ready for training</text>
+  <text x="220" y="396" text-anchor="middle" class="tiny">Next steps: Embedding, Dense, RNN, LSTM</text>
+
+  <line x1="1210" y1="370" x2="1155" y2="370" class="arrow"/>
+  <line x1="825" y1="370" x2="770" y2="370" class="arrow"/>
+  <line x1="440" y1="370" x2="385" y2="370" class="arrow"/>
+
+  <text x="800" y="495" text-anchor="middle" class="cardtext">Core concepts in Module 1: tokenization · OOV handling · padding · stopword removal · label encoding</text>
+</svg>
