@@ -1,0 +1,78 @@
+# =========================================================
+# Natural Language Processing in TensorFlow
+# Full Repository Requirements
+# =========================================================
+# Root-level requirements for the complete Course 3 repository.
+#
+# Covers:
+# - Module 1: Text sentiment analysis
+# - Module 2: Word embeddings
+# - Module 3: Sequence models
+# - Module 4: Sequence models and literature
+#
+# If you prefer a lighter setup, each module folder also contains
+# its own dedicated requirements.txt file.
+# =========================================================
+
+
+# ---------------------------------------------------------
+# Core Deep Learning Framework
+# ---------------------------------------------------------
+# Main framework used across all notebooks and exercises
+tensorflow==2.15.0
+
+
+# ---------------------------------------------------------
+# Dataset Utilities
+# ---------------------------------------------------------
+# Needed for TensorFlow Datasets examples such as:
+# - imdb_reviews
+# - imdb_reviews/subwords8k
+tensorflow-datasets==4.9.6
+
+
+# ---------------------------------------------------------
+# Numerical Computing
+# ---------------------------------------------------------
+# Used for arrays, padding pipelines, labels, and predictions
+numpy==1.26.4
+
+
+# ---------------------------------------------------------
+# Visualization
+# ---------------------------------------------------------
+# Used for training curves, history plots, and quick analysis
+matplotlib==3.8.2
+
+
+# ---------------------------------------------------------
+# Notebook Environment
+# ---------------------------------------------------------
+# Recommended for running the notebooks locally
+jupyterlab==4.2.5
+ipykernel==6.29.5
+
+
+# ---------------------------------------------------------
+# Notes
+# ---------------------------------------------------------
+# Standard library modules such as:
+# - csv
+# - json
+# - io
+# - os
+# - time
+# do not need to be listed here.
+#
+# Keras is included through TensorFlow, so no separate
+# `keras` package is required.
+#
+# On Google Colab:
+# - TensorFlow is usually already installed
+# - some datasets and text corpora may still be downloaded at runtime
+#
+# If you want a minimal installation, the essential packages are:
+# - tensorflow
+# - tensorflow-datasets
+# - numpy
+# - matplotlib

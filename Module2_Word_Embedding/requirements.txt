@@ -1,0 +1,72 @@
+# =========================================================
+# Module 2 - Word Embedding
+# Natural Language Processing in TensorFlow
+# =========================================================
+# This module focuses on:
+# - trainable word embeddings
+# - sentiment classification with embeddings
+# - TensorFlow Datasets (TFDS)
+# - subword tokenization
+# - embedding export to vecs.tsv / meta.tsv
+# - multiclass text classification with embeddings
+#
+# Standard library modules like:
+# - json
+# - csv
+# - io
+# do not need to be listed here.
+# =========================================================
+
+
+# ---------------------------------------------------------
+# Core Deep Learning Framework
+# ---------------------------------------------------------
+tensorflow==2.15.0
+
+
+# ---------------------------------------------------------
+# Dataset Utilities
+# ---------------------------------------------------------
+# Needed for IMDB datasets and subword tokenization examples
+tensorflow-datasets==4.9.6
+
+
+# ---------------------------------------------------------
+# Numerical Computing
+# ---------------------------------------------------------
+# Used for array conversion and TensorFlow compatibility
+numpy==1.26.4
+
+
+# ---------------------------------------------------------
+# Visualization
+# ---------------------------------------------------------
+# Used for training curves and embedding-related plots
+matplotlib==3.8.2
+
+
+# ---------------------------------------------------------
+# Notebook Environment
+# ---------------------------------------------------------
+# Recommended for running the notebooks locally
+jupyterlab==4.2.5
+ipykernel==6.29.5
+
+
+# ---------------------------------------------------------
+# Notes
+# ---------------------------------------------------------
+# If you want a minimal local setup, you can keep only:
+# - tensorflow
+# - tensorflow-datasets
+# - numpy
+# - matplotlib
+#
+# On Google Colab:
+# - TensorFlow is usually already installed
+# - some datasets may still need to be downloaded at runtime
+#
+# This module exports:
+# - vecs.tsv
+# - meta.tsv
+# but no extra package is required for that step.
