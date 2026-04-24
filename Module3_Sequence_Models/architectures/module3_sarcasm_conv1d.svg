@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 894" width="800" height="894">
+
+    <defs>
+      <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+        <polygon points="0 0, 12 6, 0 12" fill="#5B6573"/>
+      </marker>
+    </defs>
+    
+<style>
+    .title { font-family: Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 700; fill: #1F2937; }
+    .subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 15px; fill: #5B6573; }
+    .boxtitle { font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 700; fill: #1F2937; }
+    .boxtext { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #4B5563; }
+    .chip { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; fill: white; }
+    .arrow { stroke: #5B6573; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+    </style>
+<rect x="0" y="0" width="100%" height="100%" rx="24" ry="24" fill="#F8FAFC"/>
+<text x="400.0" y="38" text-anchor="middle" class="title">Sarcasm with 1D Convolution</text>
+<text x="400.0" y="64" text-anchor="middle" class="subtitle">Short-text local pattern detector for sarcasm</text>
+<rect x="130" y="90" rx="22" ry="22" width="540" height="94" fill="#EAF4FF" stroke="#3B82F6" stroke-width="2.5"/>
+<circle cx="164" cy="124" r="18" fill="#3B82F6"/>
+<text x="164" y="129" text-anchor="middle" class="chip">1</text>
+<text x="400.0" y="126" text-anchor="middle" class="boxtitle">Input</text>
+<text x="400.0" y="151" text-anchor="middle" class="boxtext">Headline sequence</text>
+<line x1="400.0" y1="184" x2="400.0" y2="218" class="arrow"/>
+<rect x="130" y="218" rx="22" ry="22" width="540" height="94" fill="#F6ECFF" stroke="#A855F7" stroke-width="2.5"/>
+<circle cx="164" cy="252" r="18" fill="#A855F7"/>
+<text x="164" y="257" text-anchor="middle" class="chip">2</text>
+<text x="400.0" y="254" text-anchor="middle" class="boxtitle">Embedding</text>
+<text x="400.0" y="279" text-anchor="middle" class="boxtext">vocab_size = 1000  •  16 dimensions</text>
+<text x="400.0" y="297" text-anchor="middle" class="boxtext">input_length = 120</text>
+<line x1="400.0" y1="312" x2="400.0" y2="346" class="arrow"/>
+<rect x="130" y="346" rx="22" ry="22" width="540" height="94" fill="#E8FBFF" stroke="#06B6D4" stroke-width="2.5"/>
+<circle cx="164" cy="380" r="18" fill="#06B6D4"/>
+<text x="164" y="385" text-anchor="middle" class="chip">3</text>
+<text x="400.0" y="382" text-anchor="middle" class="boxtitle">Conv1D</text>
+<text x="400.0" y="407" text-anchor="middle" class="boxtext">128 filters  •  kernel_size = 5  •  ReLU</text>
+<line x1="400.0" y1="440" x2="400.0" y2="474" class="arrow"/>
+<rect x="130" y="474" rx="22" ry="22" width="540" height="94" fill="#FFF3E6" stroke="#F97316" stroke-width="2.5"/>
+<circle cx="164" cy="508" r="18" fill="#F97316"/>
+<text x="164" y="513" text-anchor="middle" class="chip">4</text>
+<text x="400.0" y="510" text-anchor="middle" class="boxtitle">GlobalMaxPooling1D</text>
+<text x="400.0" y="535" text-anchor="middle" class="boxtext">Keep the strongest feature over time</text>
+<line x1="400.0" y1="568" x2="400.0" y2="602" class="arrow"/>
+<rect x="130" y="602" rx="22" ry="22" width="540" height="94" fill="#FFEAF1" stroke="#EC4899" stroke-width="2.5"/>
+<circle cx="164" cy="636" r="18" fill="#EC4899"/>
+<text x="164" y="641" text-anchor="middle" class="chip">5</text>
+<text x="400.0" y="638" text-anchor="middle" class="boxtitle">Dense</text>
+<text x="400.0" y="663" text-anchor="middle" class="boxtext">24 units  •  ReLU</text>
+<line x1="400.0" y1="696" x2="400.0" y2="730" class="arrow"/>
+<rect x="130" y="730" rx="22" ry="22" width="540" height="94" fill="#ECFDF3" stroke="#22C55E" stroke-width="2.5"/>
+<circle cx="164" cy="764" r="18" fill="#22C55E"/>
+<text x="164" y="769" text-anchor="middle" class="chip">6</text>
+<text x="400.0" y="766" text-anchor="middle" class="boxtitle">Output</text>
+<text x="400.0" y="791" text-anchor="middle" class="boxtext">1 unit  •  Sigmoid</text>
+<text x="400.0" y="809" text-anchor="middle" class="boxtext">Binary sarcasm classification</text>
+</svg>

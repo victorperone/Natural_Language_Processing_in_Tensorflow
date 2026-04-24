@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" width="1400" height="650">
+
+<defs>
+  <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+    <polygon points="0 0, 12 6, 0 12" fill="#5B6573"/>
+  </marker>
+</defs>
+
+<style>
+.title { font-family: Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 700; fill: #1F2937; }
+.subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 15px; fill: #5B6573; }
+.box-title { font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; fill: #1F2937; }
+.box-text { font-family: Arial, Helvetica, sans-serif; font-size: 13px; fill: #4B5563; }
+.small { font-family: Arial, Helvetica, sans-serif; font-size: 12px; fill: #6B7280; }
+.arrow { stroke: #5B6573; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+.line { stroke: #94A3B8; stroke-width: 2; fill: none; }
+</style>
+
+<rect x="0" y="0" width="100%" height="100%" rx="24" ry="24" fill="#F8FAFC"/>
+
+<text x="700" y="40" text-anchor="middle" class="title">Single Layer vs Multi Layer Sequence Models</text>
+<text x="700" y="66" text-anchor="middle" class="subtitle">Depth changes how much temporal abstraction the network can build</text>
+
+<rect x="40" y="100" rx="22" ry="22" width="620" height="520" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="2"/>
+<text x="350" y="135" text-anchor="middle" class="box-title">Single Layer</text>
+<text x="350" y="158" text-anchor="middle" class="box-text">Simpler recurrent baseline</text>
+
+<rect x="180" y="200" rx="18" ry="18" width="340" height="70" fill="#EAF4FF" stroke="#3B82F6" stroke-width="2.5"/>
+<text x="350" y="230" text-anchor="middle" class="box-title">Input Sequence</text>
+<text x="350" y="252" text-anchor="middle" class="box-text">Token or subword sequence</text>
+<line x1="350" y1="270" x2="350" y2="320" class="arrow"/>
+
+<rect x="180" y="320" rx="18" ry="18" width="340" height="70" fill="#F6ECFF" stroke="#A855F7" stroke-width="2.5"/>
+<text x="350" y="350" text-anchor="middle" class="box-title">Embedding</text>
+<text x="350" y="372" text-anchor="middle" class="box-text">Dense vector sequence</text>
+<line x1="350" y1="390" x2="350" y2="440" class="arrow"/>
+
+<rect x="180" y="440" rx="18" ry="18" width="340" height="70" fill="#FFF8E8" stroke="#F59E0B" stroke-width="2.5"/>
+<text x="350" y="470" text-anchor="middle" class="box-title">1 Recurrent Layer</text>
+<text x="350" y="492" text-anchor="middle" class="box-text">Direct sequence summary</text>
+<text x="350" y="560" text-anchor="middle" class="small">Pros: easier to train, fewer parameters, strong baseline</text>
+
+<rect x="740" y="100" rx="22" ry="22" width="620" height="520" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="2"/>
+<text x="1050" y="135" text-anchor="middle" class="box-title">Multi Layer / Stacked</text>
+<text x="1050" y="158" text-anchor="middle" class="box-text">Deeper temporal hierarchy</text>
+
+<rect x="880" y="190" rx="18" ry="18" width="340" height="70" fill="#EAF4FF" stroke="#3B82F6" stroke-width="2.5"/>
+<text x="1050" y="220" text-anchor="middle" class="box-title">Input Sequence</text>
+<text x="1050" y="242" text-anchor="middle" class="box-text">Token or subword sequence</text>
+<line x1="1050" y1="260" x2="1050" y2="300" class="arrow"/>
+
+<rect x="880" y="300" rx="18" ry="18" width="340" height="70" fill="#F6ECFF" stroke="#A855F7" stroke-width="2.5"/>
+<text x="1050" y="330" text-anchor="middle" class="box-title">Embedding</text>
+<text x="1050" y="352" text-anchor="middle" class="box-text">Dense vector sequence</text>
+<line x1="1050" y1="370" x2="1050" y2="410" class="arrow"/>
+
+<rect x="880" y="410" rx="18" ry="18" width="340" height="70" fill="#FFF8E8" stroke="#F59E0B" stroke-width="2.5"/>
+<text x="1050" y="440" text-anchor="middle" class="box-title">Recurrent Layer 1</text>
+<text x="1050" y="462" text-anchor="middle" class="box-text">Must return full sequence</text>
+<line x1="1050" y1="480" x2="1050" y2="520" class="arrow"/>
+
+<rect x="880" y="520" rx="18" ry="18" width="340" height="70" fill="#FFEAF1" stroke="#EC4899" stroke-width="2.5"/>
+<text x="1050" y="550" text-anchor="middle" class="box-title">Recurrent Layer 2</text>
+<text x="1050" y="572" text-anchor="middle" class="box-text">Learns higher-level temporal structure</text>
+<text x="1050" y="605" text-anchor="middle" class="small">Pros: more expressive   •   Costs: more compute, harder optimization</text>
+
+</svg>
