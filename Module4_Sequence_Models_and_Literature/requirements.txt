@@ -1,0 +1,63 @@
+# =========================================================
+# Module 4 - Sequence Models and Literature
+# Natural Language Processing in TensorFlow
+# =========================================================
+# This module focuses on:
+# - next-word prediction
+# - language modeling
+# - n-gram sequence construction
+# - autoregressive text generation
+# - Bidirectional LSTM generators
+# - stacked recurrent generation models
+# - literary / lyric text generation
+#
+# Standard library modules like:
+# - os
+# - time
+# - io
+# do not need to be listed here.
+# =========================================================
+
+
+# ---------------------------------------------------------
+# Core Deep Learning Framework
+# ---------------------------------------------------------
+tensorflow==2.15.0
+
+
+# ---------------------------------------------------------
+# Numerical Computing
+# ---------------------------------------------------------
+# Used for sequence arrays, labels, and generation logic
+numpy==1.26.4
+
+
+# ---------------------------------------------------------
+# Visualization
+# ---------------------------------------------------------
+# Used for training curves and notebook plots
+matplotlib==3.8.2
+
+
+# ---------------------------------------------------------
+# Notebook Environment
+# ---------------------------------------------------------
+# Recommended for running the notebooks locally
+jupyterlab==4.2.5
+ipykernel==6.29.5
+
+
+# ---------------------------------------------------------
+# Notes
+# ---------------------------------------------------------
+# If you want a minimal local setup, you can keep only:
+# - tensorflow
+# - numpy
+# - matplotlib
+#
+# On Google Colab:
+# - TensorFlow is usually already installed
+# - text corpora may still be downloaded at runtime
+#
+# Keras is included through TensorFlow, so no separate
+# `keras` package is required.
